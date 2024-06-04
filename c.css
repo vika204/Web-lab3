@@ -1,0 +1,375 @@
+body {
+ 
+  font-family: Arial;
+  justify-content: center;
+  background-color: rgb(212, 212, 212);
+  margin: 0;
+  margin-top: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 1%;
+  align-items: start; /* Додаємо цю властивість */
+
+}
+.left-section,
+.right-section {
+  background-color: white;
+  border-color: #bbbbbd;
+  border-radius: 4px;
+  margin-right: 15px;
+  height: auto;
+  min-height: 100px;
+}
+
+.right-section {
+  background-color: white;
+  border-color: #bbbbbd;
+  border-radius: 4px;
+  margin-right: 0;
+  height: auto;
+  min-height: 100px;
+  width: 300px; 
+  overflow: auto; 
+}
+
+.right1-line,
+.right2-line,
+.right3-line {
+  border-bottom: 1px solid lightgrey;
+}
+
+.right1-line,
+.right2-line,
+.right3-line,
+.right4-line {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  height: 25%;
+  min-height: 50px;
+}
+
+
+.text-item {
+  font-weight: bold;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.plus-btn,
+.minus-btn,
+.cancel-btn {
+  height: 27px;
+  min-width: 30px;
+  border-radius: 50%;
+  border: #db2828;
+  color: rgb(232, 232, 232);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 6px;
+  font-size: 23px;
+}
+.minus-btn {
+  background-color: #db2828;
+  box-shadow: 0 3px #bf2728;
+}
+
+.plus-btn {
+  background-color: #22ba46;
+  box-shadow: 0 3px #21a340;
+}
+
+.quantity {
+  height: 26px;
+  min-width: 30px;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #e8e8e8;
+  border-radius: 10%;
+  color: #7b7b7b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.search-bar {
+  height: 35px;
+  width: 85%;
+  border-radius: 3px;
+  border-color: #dededf;
+  border-style: solid;
+  border-radius: 3px 0 0 3px;
+  border-width: 1px;
+  padding-left: 15px;
+}
+
+.add-btn {
+  width: 15%;
+  height: 35px;
+  min-width: 75px;
+  margin-left: 0;
+  background-color: #4283ca;
+  border: 1px solid #2285d0;
+  color: white;
+  border-width: 0;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 0 4px #2276b7;
+}
+
+.three-lines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
+}
+
+.product-name {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  min-width: 80px;
+}
+.user-choose {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  min-width: 120px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-right: 5px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.prod {
+  width: 60%;
+  margin: 0px;
+}
+
+.search {
+  background-color: white;
+  border: 1px solid #bbbbbd;
+  border-radius: 3px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  height: 25px;
+  min-width: 70px;
+}
+
+.search:focus,
+.search-bar:focus {
+  border-color: rgb(158, 234, 255);
+  box-shadow: 0 0 8px rgba(98, 171, 255, 0.5);
+  outline: none;
+}
+.no-bought,
+.bought {
+  background-color: #f3f3f3;
+  border: 1px solid #bbbbbd;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-width: 0;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 3px;
+  box-shadow: 0 4px #cfcfd0;
+
+  color: #616161;
+}
+.no-bought {
+  margin-right: 5px;
+}
+
+.cancel-btn {
+  height: 26px;
+  min-width: 30px;
+  width: 30px;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: #db2828;
+  box-shadow: 0 3px #bf2728;
+
+  font-size: 17px;
+  padding-left: 5px;
+  padding-right: 3px;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    min-width: 380px;
+    margin: 15px;
+  }
+
+  .left-section {
+   
+    margin-bottom: 10px;
+    
+  }
+
+}
+.product-item {
+  /* ваші поточні стилі */
+  background-color: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #5e5e5e;
+  margin: 0;
+  margin-right: 5px;
+  margin-top: 5px;
+  font-size: 15px;
+  padding: 5px;
+  word-wrap: break-word;
+
+  margin-bottom: 5px;
+
+  width: auto;
+  white-space: nowrap; 
+}
+
+.amount {
+  font-weight: bold;
+  margin-left: 3px;
+  color: white;
+  background-color: #e27837;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  min-width: 20px;
+  width: 20px;
+  text-align: center;
+  margin-left: 0;
+  line-height: 20px;
+}
+.badge {
+  display: flex;
+  flex-direction: column;
+  
+  position: fixed;
+  bottom: 0;
+  width: 130px;
+  height: 40px;
+  background-color: #af01da;
+  color: white;
+  transition: all 0.5s ease;
+  left: 10%;
+  border-radius: 10px 10px 0 0;
+}
+
+.badge:hover {
+  height: 80px;
+  background-color: #4d01da;
+}
+
+.buylist {
+  margin: 8px;
+  font-size: 20px;
+  color: white;
+  height: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.whocreate {
+  font-size: 10px;
+  margin-left: 26px;
+  margin-bottom: 5px;
+  margin-top: 3px;
+}
+
+.name {
+  font-size: 14px;
+  margin-left: 26px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+[data-tooltip] {
+  position: relative;
+  display: inline-block;
+}
+[data-tooltip]::before {
+  content: attr(data-tooltip);
+  visibility: hidden;
+  bottom:100%;
+  transition: opacity 0.6s, transform 0.4s;
+  max-width: 100px;
+  min-height: 20px;
+  background-color: #af01da;
+  padding: 8px;
+  color: white;
+  opacity: 0;
+
+  border-radius: 15px;
+  position: absolute;
+ 
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 14px;
+}
+
+[data-tooltip]:hover::before {
+  visibility: visible;
+  transform: translate(-50%, -10px);
+  opacity: 1;
+}
+
+.prod[data-tooltip]::before {
+  left: 20%;
+}
+@media print {
+  .badge {
+    background-color: white;
+    color: #af01da;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #af01da;
+    border-radius: 10px;
+  }
+  .buylist {
+    display: none;
+  }
+}
+button {
+  cursor: pointer;
+}
+
+
+.right2-line,.right4-line {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  align-items: center;
+}
+
+
